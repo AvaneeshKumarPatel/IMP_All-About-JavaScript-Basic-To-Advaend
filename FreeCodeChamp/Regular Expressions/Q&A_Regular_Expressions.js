@@ -108,3 +108,43 @@ let result = difficultSpelling.match(myRegex);
 
 console.log(result);  // [ 'ss', 'ss' ]
 
+// Question ==>  // For this challenge, chewieQuote has been initialized as the string Aaaaaaaaaaaaaaaarrrgh! behind the scenes. 
+//Create a regex chewieRegex that uses the * character to match an uppercase A character immediately followed by zero or more lowercase a characters in chewieQuote.
+// Your regex does not need flags or character classes, and it should not match any of the other quotes.
+
+// Answers=>>
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; // Change this line
+let result = chewieQuote.match(chewieRegex);
+
+console.log(result) 
+ // output
+// [ 'Aaaaaaaaaaaaaaaa',
+// index: 0,
+// input: 'Aaaaaaaaaaaaaaaarrrgh!',
+// groups: undefined ]
+
+
+// Question =>>
+// Fix the regex /<.*>/ to return the HTML tag <h1> and not the text "<h1>Winter is coming</h1>". Remember the wildcard . in a regular expression matches any character.
+
+// Answer==
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line
+let result = text.match(myRegex);
+console.log(result)
+
+
+// Output 
+// [ '<h1>',
+//         index: 0,
+//         input: '<h1>Winter is coming</h1>',
+//         groups: undefined ]
+
+
+// Question =>>
+//Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
+
+let reCriminals = /C+/; // Change this line
+
+

@@ -74,3 +74,37 @@ let vowelRegex = /[aeiou]/gi;
 let result = quoteSample.match(vowelRegex);
 
         console.log(result)
+
+
+// Question =>>
+// Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
+// Answers=>>
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+
+console.log(result);
+
+// Question =..
+// Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+
+// Answer ==>
+  let quoteSample = "3 blind mice.";
+let myRegex = /[^aeiou^0-9]/gi; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+
+console.log(result)
+
+
+
+// Question =>>
+// You want to find matches when the letter s occurs one or more times in Mississippi. Write a regex that uses the + sign.
+
+// Answers ==>
+
+        let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; // Changed this line
+let result = difficultSpelling.match(myRegex);
+
+console.log(result);  // [ 'ss', 'ss' ]
+
